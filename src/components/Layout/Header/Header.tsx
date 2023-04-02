@@ -320,6 +320,7 @@ const Head = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  padding: 10px 0;
   @media (max-width: 1685px) {
     flex-direction: column;
     padding: 20px;
