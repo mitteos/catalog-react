@@ -9,20 +9,20 @@ import {useAppSelector} from "hooks/redux";
 export const CartPage = () => {
 
     const {items} = useAppSelector(state => state.cart)
-    const totalPrice = items.map(el => el.product.price * el.count).reduce((prev, next) => prev + next, 0)
+    const totalPrice = items?.map(el => el.product.price * el.count).reduce((prev, next) => prev + next, 0)
 
     return (
-        <Container>
+        <Container data-testid="cart-page">
             <Crumbs>
                 <CrumbItem>Корзина</CrumbItem>
             </Crumbs>
             <Title>Корзина</Title>
             <Separator />
-            {items.length
+            {items?.length
                 ? <CartList />
-                : <Empty>Корзина пуста</Empty>
+                : <Empty data-testid="empty-list">Корзина пуста</Empty>
             }
-            {!!items.length &&
+            {!!items?.length &&
                 <Total>
                     <Link to="/cart/checkout">
                         <Checkout>

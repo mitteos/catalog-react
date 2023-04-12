@@ -79,16 +79,16 @@ export const FilterBar: React.FC<FilterBarProps> = ({className}) => {
                         <ItemTitleInner>₸</ItemTitleInner>
                     </ItemTitle>
                     <Price>
-                        <PriceCount value={priceValue.min} onChange={(e) => setPriceValue({...priceValue, min: +e.target.value})}/>
+                        <PriceCount value={priceValue?.min} onChange={(e) => setPriceValue({...priceValue, min: +e.target.value})}/>
                         <PriceSeparate>-</PriceSeparate>
-                        <PriceCount value={priceValue.max} onChange={(e) => setPriceValue({...priceValue, max: +e.target.value})}/>
+                        <PriceCount value={priceValue?.max} onChange={(e) => setPriceValue({...priceValue, max: +e.target.value})}/>
                     </Price>
                 </Item>
                 <Item>
                     <Title>Производитель</Title>
                     <SearchInput setSearchValue={setSearchValue}/>
                     <List>
-                        {brands.filter(el => el.name.toLowerCase().includes(searchValue.toLowerCase())).slice(0, brandLimit).map(brand =>
+                        {brands?.filter(el => el.name.toLowerCase().includes(searchValue.toLowerCase())).slice(0, brandLimit).map(brand =>
                             <ListItem
                                 key={brand.id}
                                 onClick={() => handleSetLocalBrands(brand.id)}
@@ -101,7 +101,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({className}) => {
                             </ListItem>
                         )}
                     </List>
-                    {brandLimit !== brands.length &&
+                    {brandLimit !== brands?.length &&
                         <GetAll onClick={() => setBrandLimit(brands.length)}>
                             <GetAllText>Показать все</GetAllText>
                             <GetAllArrow />
@@ -118,7 +118,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({className}) => {
                 </Control>
                 <Separator />
                 <Categories>
-                    {items.map(type =>
+                    {items?.map(type =>
                         <div key={type.id}>
                             <Item onClick={() => setTypeFilter(type.id)}>
                                 <CategoryTitle $isActive={type.id === selectedType}>{type.name}</CategoryTitle>
@@ -144,7 +144,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({className}) => {
             </Content>
         </Container>
     );
-};
+}
 
 const Container = styled.div`
   max-width: 238px;

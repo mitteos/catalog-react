@@ -106,7 +106,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({isNewProduct, className
     }
 
     return (
-        <Container className={className}>
+        <Container className={className} data-testid="product-form">
             <Item onSubmit={handleSubmit(handleCreateProduct)}>
                 <TextInput
                     title="Название"
@@ -163,7 +163,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({isNewProduct, className
                 />
                 <DropdownInput
                     title="Производитель"
-                    headValue={brandValue.name}
+                    headValue={brandValue?.name}
                 >
                     {brands.map(brand =>
                         <DropDownItem
@@ -176,7 +176,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({isNewProduct, className
                     <DropdownInput
                         key={el.id}
                         title="Тип ухода"
-                        headValue={el.selectedValue.name}
+                        headValue={el.selectedValue?.name}
                     >
                         {el.types.map(type =>
                             <DropDownItem

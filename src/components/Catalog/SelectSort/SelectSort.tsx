@@ -35,11 +35,17 @@ export const SelectSort: React.FC<SelectSortProps> = ({className}) => {
         <Container className={className}>
             <Title>Сортировка:</Title>
             <Select>
-                <SelectItem onClick={() => setIsSelectOpen(!isSelectOpen)}>
+                <SelectItem
+                    onClick={() => setIsSelectOpen(!isSelectOpen)}
+                    data-testid="sort-select"
+                >
                     <SortNameText>{sortCollection.find(el => el.value === sortValue)?.name}</SortNameText>
                     <SortHeadArrow $variant={sortValue}/>
                 </SelectItem>
-                <SelectContainer $isOpen={isSelectOpen}>
+                <SelectContainer
+                    $isOpen={isSelectOpen}
+                    data-testid="sort-select-container"
+                >
                     {sortCollection.map(el =>
                         el.value !== sortValue &&
                         <SelectItem key={el.id} onClick={() => selectSortValue(el.value)}>

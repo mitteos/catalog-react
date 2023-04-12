@@ -10,8 +10,9 @@ import PhoneLightIcon from "assets/svg/phoneLight.svg";
 import {AccentButton, AccentLink, SearchInput} from "components/UI";
 import {Cart} from "components/Products";
 import {Link} from "react-router-dom";
+import {NavBar} from "components/Layout/NavBar";
 
-export const Header = () => {
+export const Header = React.memo(() => {
 
     const [isOpen, setIsOpen] =  useState<boolean>(false)
 
@@ -23,7 +24,7 @@ export const Header = () => {
 
     return (
         <HeaderContainer>
-            <TopContainer $isOpen={isOpen}>
+            <HeaderNavigation $isOpen={isOpen}>
                 <ContainerInner>
                     <Contacts>
                         <ContactItem>
@@ -59,28 +60,15 @@ export const Header = () => {
                             </CallbackMobile>
                         </ContactItemMobile>
                     </Contacts>
-                    <Navigation>
-                        <NavigationTitle>Меню сайта:</NavigationTitle>
-                        <NavigationItem href="">О компании</NavigationItem>
-                        <Separator $height={29}/>
-                        <NavigationItem href="">Доставка и оплата</NavigationItem>
-                        <Separator $height={29}/>
-                        <NavigationItem href="">Возврат</NavigationItem>
-                        <Separator $height={29}/>
-                        <NavigationItem href="">Контакты</NavigationItem>
-                        <PriceBtnMobile>
-                            <img src={DownloadIcon} alt=""/>
-                            <p>Прайс-лист</p>
-                        </PriceBtnMobile>
-                    </Navigation>
+                    <NavBar />
                 </ContainerInner>
-            </TopContainer>
+            </HeaderNavigation>
             <ContainerSeparator />
-            <BottomContainer>
+            <HeaderInfo>
                 <Head>
                     <HeadControl>
                         <HeadLogo to="/catalog">
-                            <img src={LogoIcon} alt=""/>
+                            <img src={LogoIcon} alt="logo"/>
                         </HeadLogo>
                             <CatalogButton href="/catalog">
                                 <ButtonText>Каталог</ButtonText>
@@ -120,10 +108,10 @@ export const Header = () => {
                         <Cart />
                     </HeadRow>
                 </Head>
-            </BottomContainer>
+            </HeaderInfo>
         </HeaderContainer>
     );
-};
+})
 
 const HeaderContainer = styled.div`
   position: relative;
@@ -144,7 +132,7 @@ const Container = styled.div`
     width: 100%;
   }
 `
-const TopContainer = styled(Container)<{$isOpen: boolean}>`
+const HeaderNavigation = styled(Container)<{$isOpen: boolean}>`
   @media (max-width: 900px) {
     background: #fff;
     position: fixed;
@@ -157,7 +145,7 @@ const TopContainer = styled(Container)<{$isOpen: boolean}>`
     transition: all 0.3s ease;
   }
 `
-const BottomContainer = styled(Container)`
+const HeaderInfo = styled(Container)`
   @media (max-width: 900px) {
     position: relative;
     z-index: 1;
@@ -268,52 +256,6 @@ const Separator = styled.div<{$height: number}>`
   @media (max-width: 900px) {
     display: none;
   }
-`
-const Navigation = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  @media (max-width: 1500px) {
-    gap: 15px;
-  }
-  @media (max-width: 900px) {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding: 25px 0 0;
-    gap: 20px;
-  }
-`
-const NavigationTitle = styled.p`
-  display: none;
-  @media (max-width: 900px) {
-    display: block;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 150%;
-    color: #3F4E65;
-    margin-bottom: 5px;
-  }
-`
-const NavigationItem = styled.a`
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
-  color: #3F4E65;
-`
-const PriceBtnMobile = styled(AccentButton)`
-  display: none;
-  @media (max-width: 900px) {
-    display: flex;
-  }
-  padding: 26px 0;
-  max-width: 290px;
-  width: 100%;
-  gap: 12px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
-  color: #FFFFFF;
 `
 const Head = styled.div`
   display: flex;

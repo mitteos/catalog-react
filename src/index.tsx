@@ -5,6 +5,7 @@ import {Provider} from "react-redux";
 import {persistor, store} from "store/store";
 import "styles/global.css";
 import { PersistGate } from 'redux-persist/integration/react';
+import {BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <Provider store={store}>
       <PersistGate persistor={persistor}>
-          <App />
+          <BrowserRouter>
+              <App />
+          </BrowserRouter>
       </PersistGate>
   </Provider>
 );

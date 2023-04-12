@@ -22,12 +22,13 @@ export const CategorySort: React.FC<CategorySortProps> = ({className}) => {
     }
 
     return (
-        <Container className={className}>
-            {items.map(category =>
+        <Container className={className} data-testid="category-sort-container">
+            {items?.map(category =>
                 <Item
                     key={category.id}
                     onClick={() => setTypeFilter(category.id)}
                     $isActive={category.id === selectedType}
+                    data-testid={`category-btn-${category.id}`}
                 >{category.name}</Item>
             )}
         </Container>

@@ -6,7 +6,7 @@ import {Crumbs} from "components/Layout";
 
 export const CatalogPage = () => {
     return (
-        <Container>
+        <Container data-testid="main-page">
             <Crumbs>
                 <CrumbItem>Косметика и гигиена</CrumbItem>
             </Crumbs>

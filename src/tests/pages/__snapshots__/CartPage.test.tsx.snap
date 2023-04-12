@@ -1,0 +1,263 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cart page render with products 1`] = `
+<div
+  class="sc-iXRnGQ hQrAHU"
+  data-testid="cart-page"
+>
+  <div>
+    <div
+      class="sc-gKcDQK fhhudC"
+    >
+      <div
+        class="sc-fzmOIZ bJyZzB"
+      >
+        <img
+          alt=""
+          src="arrowBtn.svg"
+        />
+      </div>
+      <p>
+        назад
+      </p>
+    </div>
+    <div
+      class="sc-knMnlt ekYAgR"
+    >
+      <a
+        class="sc-cwVcKo cFcsNv"
+        href="/"
+      >
+        Главная
+      </a>
+      <div
+        class="sc-dlyeST ja-Dpgk"
+      />
+      <p
+        class="sc-jMupPv NqbYW"
+      >
+        Корзина
+      </p>
+    </div>
+  </div>
+  <h1
+    class="sc-bVDfoq cwQvzB"
+  >
+    Корзина
+  </h1>
+  <div
+    class="sc-rZqKh cOhYHe"
+  />
+  <div
+    class="sc-jJgynQ jcMAxX"
+  >
+    <div
+      class="sc-jJgynQ jcMAxX"
+    >
+      <div
+        class="sc-oQLfA hQIZVY"
+      >
+        <div
+          class="sc-hjsqBZ iobvah"
+        >
+          <img
+            alt=""
+            src="product4.png"
+          />
+        </div>
+        <div
+          class="sc-ejdXBC caa-DCy"
+        >
+          <div
+            class="sc-gHyekI jYFqpQ"
+          >
+            <img
+              alt=""
+              src="volume.svg"
+            />
+            <p>
+              500
+               
+              мл
+            </p>
+          </div>
+          <p
+            class="sc-cmEail cJPSx"
+          >
+             
+            Жидкость для мытья посуды
+          </p>
+          <p
+            class="sc-eZYOHW cuUQZM"
+          >
+            Средства бытовой химии марки Dr MAX NEW: жидкость для мытья посуды - концентрат Таежная земляника 500 мл
+          </p>
+        </div>
+        <div
+          class="sc-FeKFz sc-fYdXmn lfOfhh dxZLMj"
+        />
+        <div
+          class="sc-ldFCYb kLRasJ"
+        >
+          <div
+            class="sc-irTswW dQYMys"
+          >
+            <div
+              class="sc-csCMJt dUfkSl"
+            >
+              -
+            </div>
+            <p
+              class="sc-fbJfA kmQOFp"
+            >
+              2
+            </p>
+            <div
+              class="sc-csCMJt dUfkSl"
+            >
+              +
+            </div>
+          </div>
+          <div
+            class="sc-FeKFz lfOfhh"
+          />
+          <p
+            class="sc-dxroEu cXBTeX"
+          >
+            300
+             ₸
+          </p>
+          <div
+            class="sc-FeKFz lfOfhh"
+          />
+          <div
+            class="sc-beqWaB hTSdDr sc-UxxwN diIooH"
+          >
+            <img
+              alt=""
+              src="basket.svg"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-bbpGSz kvUrVK"
+      />
+    </div>
+    <div
+      class="sc-jJgynQ jcMAxX"
+    >
+      <div
+        class="sc-oQLfA hQIZVY"
+      >
+        <div
+          class="sc-hjsqBZ iobvah"
+        >
+          <img
+            alt=""
+            src="product1.png"
+          />
+        </div>
+        <div
+          class="sc-ejdXBC caa-DCy"
+        >
+          <div
+            class="sc-gHyekI jYFqpQ"
+          >
+            <img
+              alt=""
+              src="volume.svg"
+            />
+            <p>
+              500
+               
+              мл
+            </p>
+          </div>
+          <p
+            class="sc-cmEail cJPSx"
+          >
+             
+            Жидкость для мытья посуды
+          </p>
+          <p
+            class="sc-eZYOHW cuUQZM"
+          >
+            Средства бытовой химии марки Dr MAX NEW: жидкость для мытья посуды - концентрат Таежная земляника 500 мл
+          </p>
+        </div>
+        <div
+          class="sc-FeKFz sc-fYdXmn lfOfhh dxZLMj"
+        />
+        <div
+          class="sc-ldFCYb kLRasJ"
+        >
+          <div
+            class="sc-irTswW dQYMys"
+          >
+            <div
+              class="sc-csCMJt dUfkSl"
+            >
+              -
+            </div>
+            <p
+              class="sc-fbJfA kmQOFp"
+            >
+              6
+            </p>
+            <div
+              class="sc-csCMJt dUfkSl"
+            >
+              +
+            </div>
+          </div>
+          <div
+            class="sc-FeKFz lfOfhh"
+          />
+          <p
+            class="sc-dxroEu cXBTeX"
+          >
+            350
+             ₸
+          </p>
+          <div
+            class="sc-FeKFz lfOfhh"
+          />
+          <div
+            class="sc-beqWaB hTSdDr sc-UxxwN diIooH"
+          >
+            <img
+              alt=""
+              src="basket.svg"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-bbpGSz kvUrVK"
+      />
+    </div>
+  </div>
+  <div
+    class="sc-ialjHA gqpYIa"
+  >
+    <a
+      href="/cart/checkout"
+    >
+      <div
+        class="sc-beqWaB hTSdDr sc-cIuQVt jQWEhq"
+      >
+        <p>
+          Оформить заказ
+        </p>
+      </div>
+    </a>
+    <p
+      class="sc-KLwla foHZqZ"
+    >
+      2700
+       ₸
+    </p>
+  </div>
+</div>
+`;

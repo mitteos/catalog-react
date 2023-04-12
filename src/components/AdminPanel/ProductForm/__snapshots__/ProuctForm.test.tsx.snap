@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`admin panel create product form 1`] = `
+<div
+  class="sc-bZPPFW cXwSgV"
+  data-testid="product-form"
+>
+  <form
+    class="sc-kMrHXl fgyeBD"
+  >
+    <div
+      class="sc-brKeYL czUdCV"
+    >
+      <label
+        class="sc-ktEKTO fLCGJV"
+      >
+        Название
+        <div
+          class="sc-hAtEyd depgod"
+        >
+          <input
+            class="sc-fmSAUk ldTEHh"
+            name="name"
+            placeholder="Введите название товара"
+            type="text"
+          />
+        </div>
+      </label>
+    </div>
+    <div
+      class="sc-brKeYL czUdCV"
+    >
+      <label
+        class="sc-ktEKTO fLCGJV"
+      >
+        Описание
+        <div
+          class="sc-hAtEyd depgod"
+        >
+          <input
+            class="sc-fmSAUk ldTEHh"
+            name="description"
+            placeholder="Введите описание товара"
+            type="text"
+          />
+        </div>
+      </label>
+    </div>
+    <div
+      class="sc-brKeYL czUdCV"
+    >
+      <label
+        class="sc-ktEKTO fLCGJV"
+      >
+        Размер
+        <div
+          class="sc-hAtEyd depgod"
+        >
+          <input
+            class="sc-fmSAUk ldTEHh"
+            name="sizeValue"
+            placeholder="Введите вес или объем"
+            type="text"
+          />
+        </div>
+      </label>
+    </div>
+    <div
+      class="sc-bALXmG hNfIjv"
+    >
+      <div
+        class="sc-ivnCJf kFeZTR"
+      >
+        Тип размера
+      </div>
+      <div
+        class="sc-cyRfQX ifiScB"
+      >
+        <div
+          class="sc-lnAgIa eLMkSJ"
+        >
+          <p
+            class="sc-iKGpAt ecOZki"
+          >
+            Объем
+          </p>
+          <div
+            class="sc-gjTGSA epCEIu"
+          />
+        </div>
+        <div
+          class="sc-eACynP gtuGQb"
+        >
+          <p
+            class="sc-ilEZps gomkVE"
+          >
+            Объем
+          </p>
+          <p
+            class="sc-ilEZps gomkVE"
+          >
+            Вес
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-brKeYL czUdCV"
+    >
+      <label
+        class="sc-ktEKTO fLCGJV"
+      >
+        Штрихкод
+        <div
+          class="sc-hAtEyd depgod"
+        >
+          <input
+            class="sc-fmSAUk ldTEHh"
+            name="barcode"
+            placeholder="Введите штрихкод товара"
+            type="text"
+          />
+        </div>
+      </label>
+    </div>
+    <div
+      class="sc-brKeYL czUdCV"
+    >
+      <label
+        class="sc-ktEKTO fLCGJV"
+      >
+        Цена
+        <div
+          class="sc-hAtEyd depgod"
+        >
+          <input
+            class="sc-fmSAUk ldTEHh"
+            name="price"
+            placeholder="Введите цену товара"
+            type="text"
+          />
+        </div>
+      </label>
+    </div>
+    <div
+      class="sc-brKeYL czUdCV"
+    >
+      <label
+        class="sc-ktEKTO fLCGJV"
+      >
+        Артикул
+        <div
+          class="sc-hAtEyd depgod"
+        >
+          <input
+            class="sc-fmSAUk ldTEHh"
+            name="vendor"
+            placeholder="Введите артикул товара"
+            type="text"
+          />
+        </div>
+      </label>
+    </div>
+    <div
+      class="sc-bALXmG hNfIjv"
+    >
+      <div
+        class="sc-ivnCJf kFeZTR"
+      >
+        Производитель
+      </div>
+      <div
+        class="sc-cyRfQX ifiScB"
+      >
+        <div
+          class="sc-lnAgIa eLMkSJ"
+        >
+          <p
+            class="sc-iKGpAt ecOZki"
+          />
+          <div
+            class="sc-gjTGSA epCEIu"
+          />
+        </div>
+        <div
+          class="sc-eACynP gtuGQb"
+        />
+      </div>
+    </div>
+    <div
+      class="sc-bALXmG hNfIjv"
+    >
+      <div
+        class="sc-ivnCJf kFeZTR"
+      >
+        Тип ухода
+      </div>
+      <div
+        class="sc-cyRfQX ifiScB"
+      >
+        <div
+          class="sc-lnAgIa eLMkSJ"
+        >
+          <p
+            class="sc-iKGpAt ecOZki"
+          />
+          <div
+            class="sc-gjTGSA epCEIu"
+          />
+        </div>
+        <div
+          class="sc-eACynP gtuGQb"
+        />
+      </div>
+    </div>
+    <div
+      class="sc-beqWaB hTSdDr sc-jItqcz hQrZAE"
+    >
+      Добавить тип
+    </div>
+  </form>
+  <div
+    class="sc-beqWaB hTSdDr sc-hhGHuG gznoyq"
+  >
+    Создать товар
+  </div>
+</div>
+`;

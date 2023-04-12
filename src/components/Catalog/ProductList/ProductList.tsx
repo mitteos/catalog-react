@@ -6,38 +6,36 @@ import {useSearchParams} from "react-router-dom";
 import {getAllProducts} from "store/features/product";
 import {FullProductState} from "store/features/product/types";
 import {Pagination} from "components/Catalog/Pagination";
+import {getSortedProducts} from "utils/sortProducts";
 
 interface ProductListProps {
     className?: string
 }
 
-export const ProductList: React.FC<ProductListProps> = ({className}) => {
+export const ProductList: React.FC<ProductListProps> = React.memo(({className}) => {
 
     const products = useAppSelector<FullProductState[]>(getAllProducts)
     const {selectedType, sortValue, selectedPrice, selectedBrand} = useAppSelector(state => state.product)
     const [searchParams] = useSearchParams()
     const currentPage = searchParams.get("page") || 1
     const queryParamsSearch = searchParams.get("name") || ""
-    const productsList = products
-        .filter(el => selectedType === null || el.typeId.includes(selectedType))
-        .filter(el => el.name.toLowerCase().includes(queryParamsSearch.toLowerCase()))
-        .sort((a, b) => {
-            if(sortValue === "price-decrease") return b.price - a.price
-            if(sortValue === "price-increase") return a.price - b.price
-            if(sortValue === "name-increase") return b.name.localeCompare(a.name)
-            return a.name.localeCompare(b.name)
-        })
-        .filter(el => el.price <= selectedPrice.max && el.price >= selectedPrice.min)
-        .filter(el => !selectedBrand.length || selectedBrand.includes(el.brandId))
-        .slice(+currentPage * 6 - 6, +currentPage * 6)
+    const productsList = getSortedProducts({
+        items: products,
+        sort: sortValue,
+        page: +currentPage,
+        search: queryParamsSearch,
+        brand: selectedBrand, type:
+        selectedType,
+        price: selectedPrice
+    })
 
     return (
         <Container className={className}>
-            <List>
+            <List data-testid="product-list">
                 {productsList.length
-                    ? productsList.map(product =>
-                    <ProductItem key={product.id} info={product}/>)
-                    : <Empty>{selectedType && queryParamsSearch ? "В данной категории нет такого товара" : queryParamsSearch ? "Товар с таким названием не найден" : "Товары отсутствуют"}</Empty>
+                    ? productsList?.map(product =>
+                    <ProductItem key={product.id} info={product} data-testid="product-item"/>)
+                    : <Empty data-testid="empty-list">{selectedType && queryParamsSearch ? "В данной категории нет такого товара" : queryParamsSearch ? "Товар с таким названием не найден" : "Товары отсутствуют"}</Empty>
                 }
             </List>
             {!!productsList.length &&
@@ -45,7 +43,7 @@ export const ProductList: React.FC<ProductListProps> = ({className}) => {
             }
         </Container>
     );
-};
+})
 
 const Container = styled.div`
   display: flex;

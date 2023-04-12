@@ -1,7 +1,7 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {FilterValuesState, InitialState, ProductState} from "store/features/product/types";
 
-const initialState: InitialState = {
+export const initialState: InitialState = {
     products: [],
     selectedType: null,
     sortValue: "name-decrease",

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`product list empty list 1`] = `
+<div
+  class="sc-hVkBjg fsMZoK"
+  data-testid="product-list"
+>
+  <p
+    class="sc-jhSXcr BKjVL"
+    data-testid="empty-list"
+  >
+    Товары отсутствуют
+  </p>
+</div>
+`;

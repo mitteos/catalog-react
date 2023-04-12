@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`category test select category 1`] = `
+<div
+  class="sc-beqWaB kHTqqt"
+  data-testid="category-sort-container"
+>
+  <p
+    class="sc-gueYoa fjOcFQ"
+    data-testid="category-btn-1"
+  >
+    test 1
+  </p>
+  <p
+    class="sc-gueYoa fjOcFQ"
+    data-testid="category-btn-2"
+  >
+    test 2
+  </p>
+  <p
+    class="sc-gueYoa fjOcFQ"
+    data-testid="category-btn-3"
+  >
+    test 3
+  </p>
+</div>
+`;

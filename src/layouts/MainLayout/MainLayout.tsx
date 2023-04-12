@@ -8,7 +8,6 @@ interface MainLayoutProps {
 }
 
 export const MainLayout: React.FC<MainLayoutProps> = ({children}) => {
-
     const location = useLocation()
     useEffect(() => {
         document.documentElement.scrollTo(0, 0)

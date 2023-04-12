@@ -46,7 +46,13 @@ export const SearchInput: React.FC<SearchInputProps> = ({setSearchValue, isHeade
                 </MobileContainer>
             }
             <InputContainer $isOpen={isOpen} $isHeader={isHeader}>
-                <Input $isHeader={isHeader} placeholder="Поиск..." value={value} onChange={(e) => setValue(e.target.value)}/>
+                <Input
+                    $isHeader={isHeader}
+                    placeholder="Поиск..."
+                    value={value}
+                    onChange={(e) => setValue(e.target.value)}
+                    data-testid="input"
+                />
                 <Btn $isHeader={isHeader}>
                     <img src={SearchIcon} alt="" onClick={(e) => isHeader ? search(e) : filter(e)}/>
                     {isHeader &&

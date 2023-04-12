@@ -12,7 +12,7 @@ interface ProductItemProps {
     info: FullProductState
 }
 
-export const ProductItem: React.FC<ProductItemProps> = ({info}) => {
+export const ProductItem: React.FC<ProductItemProps> = React.memo(({info}) => {
 
     const dispatch = useAppDispatch()
     const [isSuccess, setIsSuccess] = useState<boolean>(false)
@@ -57,7 +57,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({info}) => {
             </Navigation>
         </Container>
     );
-};
+})
 
 const Container = styled.div`
   background: #FFFFFF;
